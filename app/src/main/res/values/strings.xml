@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">16卫士</string>
+    <string name="title_home">数据</string>
+    <string name="title_switch">开关</string>
+    <string name="title_monitor">监控</string>
+    <string name="title_alarm">报警信息</string>
+    <string name="login">登录</string>
+    <string name="forgetPwd">忘记密码？</string>
+    <string name="slide_list_head">站牌列表</string>
+    <string name="home_current_station">龙华站（上行）</string>
+    <string name="toolbar_search">搜索</string>
+    <string name="search_history">搜索历史</string>
+    <string name="nofication_title">16卫士</string>
+    <string name="nofication_alarm_text">西乡（上行）站水位超标预警，请及时查看并处理</string>
+    <string name="title_boxCheck">盒子报告</string>
+    <string name="user_password_error">账号或密码错误</string>
+    <string name="hardware_check">硬件报告</string>
+    <string name="title_smart_control">智能控制</string>
+    <string name="title_patrol">巡检</string>
+    <string name="patrol_result">检测结果</string>
+    <string name="patrol_finish">完成</string>
+    <string name="loading">正在加载数据，请耐心等候</string>
+    <string name="title_leackage">漏电检测</string>
+    <string name="alarm_info">您的故障信息已收到，待修复</string>
+    <string name="time">2018.07.07 11:33:22</string>
+    <string name="about_us">关于我们</string>
+    <string name="handled">报警已成功处理</string>
+    <string name="handling">正在处理中</string>
+    <string name="unHandle">您的报警已收到，待处理</string>
+    <string name="title_system">系统报告</string>
+    <string name="enter_station_name">请输入站台名称</string>
+    <string name="aboutUs">关于我们</string>
+    <string name="enter_password">输入登录密码</string>
+    <string name="enter_account">输入登录账号</string>
+</resources>

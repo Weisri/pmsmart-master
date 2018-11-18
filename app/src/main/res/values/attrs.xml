@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="BaseToolBar">
+        <attr name="RightImgButtonIcon" format="reference"/>
+        <attr name="LeftImgButtonIcon" format="reference"/>
+        <attr name="RightButtonTitle" format="string"/>
+        <attr name="RightTextBtn" format="string"/>
+        <attr name="isShowEditText" format="boolean"/>
+        <attr name="editHint" format="string"/>
+        <attr name="myTitle" format="string"/>
+        <attr name="textColor" format="color"/>
+        <attr name="barBackground" format="color"/>
+    </declare-styleable>
+
+    <string-array name="LCD_X_Y">
+        <item>320*480</item>
+        <item>480*960</item>
+        <item>720*1080</item>
+        <item>1920*1080</item>
+    </string-array>
+
+    <declare-styleable name="RippleView">
+        <attr name="rippleColor" format="color" />
+        <attr name="rippleAlpha" format="float" />
+        <attr name="maskAlpha" format="float" />
+        <attr name="rippleTime" format="integer" />
+    </declare-styleable>
+    
+    <declare-styleable name="SignalView">
+        <attr name="thr1_2" format="integer" />
+        <attr name="thr2_3" format="integer" />
+        <attr name="thr3_4" format="integer" />
+    </declare-styleable>
+
+</resources>

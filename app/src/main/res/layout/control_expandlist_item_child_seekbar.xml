@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_50"
+    android:background="@color/all_bg">
+
+    <LinearLayout
+        android:id="@+id/rl"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:layout_marginTop="@dimen/dp_4"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/dp_24">
+
+        <TextView
+            android:id="@+id/tv_seek_name"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="灯箱亮度"
+            android:theme="@style/ExpandListItem" />
+
+        <SeekBar
+            android:id="@+id/seekbar"
+            style="@style/CustomSeekbarStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:max="100" />
+        <RelativeLayout
+            android:layout_width="50dp"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_seek_progress"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_height="match_parent"
+                android:text="50%"
+                android:theme="@style/ExpandListItem" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/all_bg"
+    android:orientation="vertical">
+    <com.pm.intelligent.widget.BaseToolBar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:myTitle="@string/title_patrol"
+        app:textColor="@color/white"
+        app:LeftImgButtonIcon="@mipmap/toolbar_back"
+        android:background="@color/toolbar_bg"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_marginLeft="@dimen/dp_20"
+        android:textSize="@dimen/sp_15"
+        android:textColor="@color/toolbar_bg"
+        android:text="@string/patrol_result"/>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rec_patrol_result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_width="@dimen/dp_320"
+            android:layout_height="@dimen/dp_40"
+            android:layout_gravity="bottom"
+            android:background="@mipmap/patrol_cancel"
+            android:layout_marginLeft="@dimen/dp_30"
+            android:gravity="center"
+            android:text="@string/patrol_finish"
+            android:textColor="@color/toolbar_bg"
+            android:layout_marginVertical="@dimen/dp_30"
+            android:textSize="@dimen/sp_15" />
+    </FrameLayout>
+
+</LinearLayout>

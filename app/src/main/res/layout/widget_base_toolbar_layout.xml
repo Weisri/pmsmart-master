@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/toolbar_bg">
+
+
+    <EditText
+        android:id="@+id/toolbar_editText"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_centerInParent="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/dp_7"
+        android:layout_marginLeft="80dp"
+        android:layout_marginRight="80dp"
+        android:layout_marginTop="@dimen/dp_7"
+        android:background="@drawable/toolbar_search_bg"
+        android:drawableLeft="@mipmap/toolbar_search_btn"
+        android:drawablePadding="10dp"
+        android:hint="请输入搜索内容"
+        android:maxLength="10"
+        android:paddingLeft="15dp"
+        android:singleLine="true"
+        android:textSize="@dimen/sp_16"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/toolbar_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="标题"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:visibility="visible" />
+
+    <ImageButton
+        android:id="@+id/toolbar_rightImgBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/dp_14"
+        android:background="@null"
+        android:padding="10dp"
+        android:src="@mipmap/toolbar_switch"
+        android:visibility="gone" />
+
+    <ImageButton
+        android:id="@+id/toolbar_leftImgBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:paddingLeft="8dp"
+        android:src="@mipmap/toolbar_slide_btn"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/toolbar_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="@dimen/dp_7"
+        android:layout_marginRight="@dimen/dp_14"
+        android:layout_marginTop="@dimen/dp_7"
+        android:background="@mipmap/toolbar_search_bg"
+        android:gravity="center"
+        android:text="搜索"
+        android:textColor="@color/toolbar_bg"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/toolbar_rightTextBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="@dimen/dp_7"
+        android:layout_marginRight="@dimen/dp_14"
+        android:layout_marginTop="@dimen/dp_7"
+        android:background="@mipmap/toolbar_search_bg"
+        android:gravity="center"
+        android:padding="8dp"
+        android:textColor="@color/text_color"
+        android:visibility="gone" />
+
+</RelativeLayout>

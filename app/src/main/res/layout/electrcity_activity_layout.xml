@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.pm.intelligent.widget.BaseToolBar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/toolbar_bg"
+        app:LeftImgButtonIcon="@mipmap/toolbar_back"
+        app:myTitle="用电监测"
+        app:textColor="@color/white" />
+
+    <com.wall_e.multiStatusLayout.MultiStatusLayout
+        android:id="@+id/status_layout_box"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:emptyLayout="@layout/empty_view"
+        app:errorLayout="@layout/error_view"
+        app:loadingLayout="@layout/loading_view"
+        app:netErrorLayout="@layout/no_network_view"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/seek_bar_green"
+            android:textColor="@color/white"
+            android:text="一周用电量"
+            />
+
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/chart"
+            android:layout_marginTop="@dimen/dp_20"
+            android:layout_width="match_parent"
+            android:layout_height="200dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_20"
+                android:background="@color/seek_bar_green"
+                android:textColor="@color/white"
+                android:text="月用电量"
+                />
+
+        <com.github.mikephil.charting.charts.LineChart
+            android:layout_marginTop="@dimen/dp_12"
+            android:id="@+id/lineChart"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"/>
+        </LinearLayout>
+
+
+    </com.wall_e.multiStatusLayout.MultiStatusLayout>
+</LinearLayout>

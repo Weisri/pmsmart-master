@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/rl_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:background="@drawable/shap_home_tiem_bg">
+
+        <TextView
+            android:gravity="center"
+            android:drawableTop="@mipmap/home_menu_box"
+            android:id="@+id/tv_grid_item_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="@color/white"
+            android:text="盒子检测" />
+
+    </LinearLayout>
+</LinearLayout>

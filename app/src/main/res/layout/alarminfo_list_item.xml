@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="62dp"
+    android:background="@color/white">
+
+
+        <!--<ImageView
+            android:id="@+id/iv_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_33"
+            android:src="@drawable/alarm_indicator"/>-->
+        <com.pm.intelligent.widget.LineView
+            android:id="@+id/iv_indicator"
+            android:layout_width="wrap_content"
+            android:layout_marginStart="33dp"
+            android:layout_height="match_parent"/>
+        <TextView
+            android:id="@+id/tv_info_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_74"
+            android:layout_marginTop="@dimen/dp_12"
+            android:textSize="@dimen/sp_13"
+            android:textColor="@color/black"
+            android:text="@string/alarm_info"/>
+
+        <TextView
+            android:id="@+id/tv_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/tv_info_detail"
+            android:layout_below="@+id/tv_info_detail"
+            android:textColor="@color/black"
+            android:text="@string/time"
+            android:textSize="@dimen/sp_13" />
+
+        <View
+            android:layout_marginStart="74dp"
+            android:layout_marginEnd="22dp"
+
+            style="@style/LineStyle"/>
+
+
+</RelativeLayout>

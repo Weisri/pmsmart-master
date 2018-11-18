@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="@dimen/dp_120"
+    android:layout_height="match_parent">
+<TextView
+    android:id="@+id/tv_station_group"
+    android:layout_width="@dimen/dp_120"
+    android:layout_height="@dimen/dp_44"
+    android:gravity="center_vertical"
+    android:paddingLeft="8dp"
+    android:text="佛山"
+    android:background="@drawable/home_station_item_group_bg"
+    android:textColor="@color/white"
+    android:elevation="10dp"
+    android:textSize="@dimen/sp_15" />
+</LinearLayout>

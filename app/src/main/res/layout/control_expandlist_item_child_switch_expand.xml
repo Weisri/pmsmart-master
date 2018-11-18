@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/all_bg"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp_24"
+            android:text="总电源开关"
+            android:theme="@style/ExpandListItem" />
+
+        <TextView
+            android:layout_toEndOf="@+id/tv_name"
+            android:id="@+id/tv_name2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp_24"
+            android:text="50%"
+            android:visibility="gone"
+            android:theme="@style/ExpandListItem" />
+
+        <com.pm.intelligent.widget.SwichView
+            android:id="@+id/switch1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:visibility="gone"
+            android:layout_marginEnd="14dp" />
+    </RelativeLayout>
+    <View
+        style="@style/LineStyle"/>
+
+
+    <LinearLayout
+        android:visibility="visible"
+        android:id="@+id/ll_expand"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:id="@+id/rl_seekbar"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <SeekBar
+                android:layout_marginBottom="15dp"
+                android:layout_marginStart="24dp"
+                android:id="@+id/seekbar"
+                android:layout_centerVertical="true"
+                style="@style/CustomSeekbarStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                />
+        </RelativeLayout>
+
+        <View
+            style="@style/LineStyle"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_start"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/tv_start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp_24"
+                android:text="开始时间"
+                android:textColor="@color/text_black"
+                android:theme="@style/ExpandListItem" />
+
+            <TextView
+                android:layout_toEndOf="@id/tv_start"
+                android:textSize="14dp"
+                android:text="8:00"
+                android:id="@+id/tv_start2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="14dp" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@mipmap/right"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="14dp"/>
+        </RelativeLayout>
+        <View
+            style="@style/LineStyle"/>
+        <RelativeLayout
+            android:id="@+id/rl_end"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/tv_end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp_24"
+                android:text="结束时间"
+                android:textColor="@color/text_black"
+                android:theme="@style/ExpandListItem" />
+
+            <TextView
+                android:textSize="14dp"
+                android:text="8:00"
+                android:id="@+id/tv_end2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/tv_end"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="14dp" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@mipmap/right"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="14dp"/>
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+</LinearLayout>

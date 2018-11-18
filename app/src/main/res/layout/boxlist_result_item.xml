@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/all_bg">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:paddingStart="16dp"
+        android:layout_marginTop="10dp"
+        android:paddingEnd="16dp"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/tv_title_box"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="CPU："
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/sp_15" />
+        <TextView
+            android:id="@+id/tv_info_box"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="aa"
+            android:layout_toRightOf="@+id/tv_title_box"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/sp_15" />
+
+        <TextView
+            android:id="@+id/tv_status_box"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CPU："
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/tv_info_box"
+            android:drawableLeft="@mipmap/kuohaozuo"
+            android:drawableRight="@mipmap/kuohaoyou"
+            android:visibility="gone"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/sp_15" />
+
+
+    </RelativeLayout>
+</LinearLayout>

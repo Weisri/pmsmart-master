@@ -1,0 +1,158 @@
+apply plugin: 'com.android.application'
+apply plugin: 'org.greenrobot.greendao'
+
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.pm.intelligent"
+        minSdkVersion 19
+        targetSdkVersion 26
+        multiDexEnabled true
+        versionCode 1
+        versionName "1.0.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+
+        javaCompileOptions { annotationProcessorOptions { includeCompileClasspath = true } }
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    //greendao配置
+    greendao {
+        //版本号，升级时可配置
+        schemaVersion 1
+        //greenDao实体类包文件
+        targetGenDir 'src/main/java'
+        //输出实体类文件夹
+        daoPackage 'com.pm.intelligent.greendao'
+    }
+
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'com.android.support:multidex:1.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
+    implementation 'com.wang.avi:library:2.1.3'
+    implementation 'q.rorbin:badgeview:1.1.3'
+    implementation 'com.android.support:design:26.1.0'
+    implementation project(':okgolibrary')
+    implementation files('libs/sun.misc.BASE64Decoder.jar')
+    implementation files('libs/shiro-all-1.2.3.jar')
+
+    /**
+     *   LeakCanary
+     */
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:1.5.4'
+    releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.4'
+
+    /**
+     *   butterKnife
+     */
+    implementation 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+
+    /**
+     *   greenDao
+     */
+    implementation 'org.greenrobot:greendao:3.2.0'
+
+    /**
+     *   解决分包问题,GreenDao在安卓4.4以下使用分包会报java.lang.NoClassDefFoundError错误
+     */
+    implementation 'com.android.support:multidex:1.0.3'
+
+    /**
+     *    下拉刷新
+     */
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.3'
+
+    /**
+     *    加载状态
+     */
+    implementation 'com.kingja.loadsir:loadsir:1.3.2'
+
+    /**
+     *    recycleview adapter
+     */
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.22'
+
+    /**
+     *    Gson
+     */
+    implementation 'com.google.code.gson:gson:2.8.5'
+
+    /**
+     *   时间地址选择器
+     */
+    implementation 'com.contrarywind:Android-PickerView:4.1.5'
+
+    /**
+     *  app更新
+     */
+    compile 'com.qianwen:update-app:3.5.2'
+
+    /**
+     *  AES库
+     */
+    compile 'com.github.tozny:java-aes-crypto:1.1.0'
+
+    /**
+     *  EVENT BUS
+     */
+    implementation 'org.greenrobot:eventbus:3.1.1'
+
+    /**
+     *  Logger日志库
+     */
+    implementation 'com.orhanobut:logger:2.2.0'
+    implementation files('libs/netty-all-5.0.0.Alpha2.jar')
+
+    //lombok
+    implementation 'org.projectlombok:lombok:1.16.20'
+
+    /**
+     * RxAndroid RxJava
+     */
+    implementation 'io.reactivex.rxjava2:rxandroid:2.0.2'
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.0'
+
+    /**
+     * Retrofit库
+     */
+    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.0.2'
+
+    //implementation 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
+    implementation 'com.jakewharton.retrofit:retrofit2-rxjava2-adapter:1.0.0'
+
+    /**
+     * 各种状态布局库
+     */
+    implementation 'com.github.Walll-E:MultiStatusLayout:v1.0.1'
+
+    /**
+     * 引入J神的rxrelay2，RxBus 出现异常仍然可以处理
+     */
+    compile 'com.jakewharton.rxrelay2:rxrelay:2.0.0'
+
+    /**
+     * 图表库
+     */
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.0.3'
+
+    /**
+     * fastJson
+     */
+    compile 'com.alibaba:fastjson:1.1.70.android'
+}

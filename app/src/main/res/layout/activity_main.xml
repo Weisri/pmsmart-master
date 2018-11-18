@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app = "http://schemas.android.com/apk/res-auto"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.pm.intelligent.module.home.activity.MainActivity">
+
+    <com.pm.intelligent.widget.SlideMenu
+        android:id="@+id/home_slide_menu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <include layout="@layout/home_include_stations_tab"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <com.pm.intelligent.widget.BaseToolBar
+            android:id="@+id/home_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_44"
+            android:background="@color/toolbar_bg"
+            android:minHeight="@dimen/dp_44"
+            app:LeftImgButtonIcon="@mipmap/toolbar_slide_btn"
+            app:RightImgButtonIcon="@mipmap/jia"
+            app:isShowEditText="true"
+            app:editHint="搜索站牌"/>
+        <include layout="@layout/home_include_main"/>
+    </LinearLayout>
+    </com.pm.intelligent.widget.SlideMenu>
+</RelativeLayout>

@@ -1,0 +1,353 @@
+syntax = "proto2";
+package com.pm.mc.chat.netty.pojo;
+option java_outer_classname = "Msg";
+option optimize_for = SPEED;
+enum MessageType {
+    /**
+     * 客户端登录
+     */ 
+    CLIENT_LOGIN=0;
+    /**
+     * 客户端心跳包发往服务器
+     */
+    HEAT_BEAT_CLIENT=1;
+    /**
+     * 硬件报告
+     */
+    HARDWARE_REPORT=2;
+    /**
+     * 系统报告
+     */
+    SYSTEM_REPORT=3;
+    /**
+     * 智能开关
+     */
+    SWITCH_STATUS=4;
+    /**
+     * 智能调节
+     */
+    ADJUST_VALUE=5;
+    /**
+     * 情景智能
+     */
+    SCENE_SMART=6;
+    /**
+     * 告警信息
+     */
+    ALARM_INFO=7;
+    /**
+     * 故障信息
+     */
+    TROUBLE_INFO=8;
+    /**
+     * 预警信息
+     */
+    WARING_INFO=9;
+    /**
+     * 用电量信息
+     */
+    ELECTRICITY_INFO=10;
+    /**
+     * 视频发布信息
+     */
+    VIDEO_PUBLISH = 11;
+    /**
+     * 文字发布信息
+     */
+    INFO_PUBLISH = 12;
+    /**
+     * 视频下架信息
+     */
+    VIDEO_DOWN = 13;
+    /**
+     * 文字下架信息
+     */
+    INFO_DOWN = 14;
+    /**
+     * 巡检信息
+     */
+    POLLING_CHECK = 15;
+    /**
+     * 点检信息
+     */
+    SPOT_CHECK = 16;
+    /**
+     * APP信息
+     */
+    APP_INFO = 17;
+}
+
+/**
+ * 登录信息类
+ */
+message LoginMessage {
+    optional string iccid = 1;
+    optional string token = 2;
+    optional uint32 status = 3;
+}
+
+/**
+ * 心跳信息类
+ */
+message PingMessage {
+    optional string iccid = 1;
+    optional string token = 2;
+}
+
+/**
+ * 硬件报告信息类
+ */
+message HardwareMessage {
+    optional string iccid = 1;
+    optional string hardwareType = 2;
+    optional uint32 status = 3;
+    repeated Hardware hardwareList = 4;
+}
+
+/**
+ * 硬件报告实体类
+ */
+message Hardware {
+    optional string hardwareName = 1;
+    optional string hardwareValue = 2;
+    optional uint32 hardwareStatus = 3;
+}
+
+/**
+ * 系统报告信息类
+ */
+message SystemMessage {
+    optional string iccid = 1;
+    optional string systemName = 2;
+    optional uint32 systemStatus = 3;
+    optional uint32 status = 4;
+}
+
+/**
+ * 智能开关信息类
+ */
+message SwitchMessage {
+    optional string iccid = 1;
+    optional uint32 status = 2;
+    repeated Switch switchList = 3;
+}
+
+/**
+ * 开关实体类
+ */
+message Switch {
+    optional string switchName = 1;
+    optional uint32 switchStatus = 2;
+}
+
+/**
+ * 智能调节信息类
+ */
+message AdjustMessage {
+    optional string iccid = 1;
+    optional uint32 status = 2;
+    repeated Adjust adjustList = 3;
+}
+
+/**
+ * 调节实体类
+ */
+message Adjust {
+    optional string adjustName = 1;
+    optional string adjustValue = 2;
+}
+
+/**
+ * 情景智能信息类
+ */
+message SceneMessage {
+    optional uint32 projectId = 1;
+    optional uint32 status = 2;
+    repeated Scene sceneList = 3;
+}
+
+/**
+ * 情景智能实体类
+ */
+message Scene {
+    optional uint32 switchId = 1;
+    optional string switchName = 2;
+    optional string startTime = 3;
+    optional string endTime = 4;
+}
+
+/**
+ * 告警信息类
+ */
+message AlarmMessage {
+    optional string iccid = 1;
+    optional string alarmType = 2;
+    optional uint32 status = 3;
+    repeated Alarm alarmList = 4;
+}
+
+/**
+ * 告警实体类
+ */
+message Alarm {
+    optional string alarmName = 1;
+    optional uint32 alarmStatus = 2;
+}
+
+/**
+ * 故障信息类
+ */
+message TroubleMessage {
+    optional string iccid = 1;
+    optional string troubleName = 2;
+    optional uint32 troubleStatus = 3;
+    optional uint32 status = 4;
+}
+
+/**
+ * 预警信息类
+ */
+message WarningMessage{
+    optional uint32 projectId = 1;
+    optional string warningType = 2;
+    optional uint32 status = 3;
+    repeated Warning warningList = 4;
+}
+
+/**
+ * 预警实体类
+ */
+message Warning {
+    optional string warningName = 1;
+    optional double warningMax = 2;
+    optional double warningMin = 3;
+}
+
+/**
+ * 用电量信息类
+ */
+message ElectricityMessage{
+    optional string iccid = 1;
+    optional double electrValue = 2;
+    optional uint32 status = 3;
+}
+
+/**
+ * 视频发布类
+ */
+message VideoMessage {
+    optional string iccid = 1; 
+    optional string videoTitle = 2;
+    optional uint32 videoType = 3;
+    optional string videoUrl = 4;
+    optional string startTime = 5;
+    optional string endTime = 6;
+    optional uint32 status = 7;
+    optional uint32 videoId = 8;
+}
+
+/**
+ * 文字发布类
+ */
+message InfoMessage {
+    optional string iccid = 1;   
+    optional uint32 infoType = 2;
+    optional string infoTitle = 3;
+    optional string infoMessage = 4;
+    optional string startTime = 5;
+    optional string endTime = 6;
+    optional uint32 status = 7;
+    optional uint32 infoId = 8;
+}
+
+/**
+ * 视频下架类
+ */
+message VideoDownMessage {
+    optional string iccid = 1;   
+    optional uint32 videoId = 2;
+    optional uint32 status = 3;
+}
+
+/**
+ * 文字下架类
+ */
+message InfoDownMessage {
+    optional string iccid = 1;   
+    optional uint32 infoId = 2;
+    optional uint32 status = 3;
+}
+
+/**
+ * 巡检信息类
+ */
+message PollingCheckMessage {
+    optional uint32 checkOrder = 1;
+    optional uint32 status = 2;
+    repeated PollingCheck pollingChecks = 3;
+}
+
+/**
+ * 巡检信息实体类
+ */
+message PollingCheck {
+    optional string iccid = 1;
+    optional string shelterName = 2;
+    optional uint32 checkStatus = 3;
+}
+
+/**
+ * 点检信息类
+ */
+message SpotCheckMessage {
+    optional string iccid = 1;
+    optional string shelterName = 2;
+    optional uint32 checkOrder = 3;
+    optional uint32 status = 4;
+    repeated SpotCheck spotChecks = 5;
+}
+
+/**
+ * 点检信息实体类
+ */
+message SpotCheck {
+    optional string hardwareType = 1;
+    optional uint32 checkStatus = 2;
+}
+
+/**
+ * APP信息类
+ */
+message AppMessage {
+    optional uint32 apkId = 1;
+    optional string appName = 2;
+    optional string packageName = 3;
+    optional string url = 4;
+    optional string updateTime = 5;
+    optional uint32 state = 6;
+}
+
+/**
+ * 消息总类
+ */
+message Message {
+    required MessageType messageType = 1;
+    optional LoginMessage loginMessage = 2;
+    optional PingMessage pingMessage = 3;
+    optional HardwareMessage hardwareMessage = 4;
+    optional SystemMessage systemMessage = 5;
+    optional SwitchMessage switchMessage = 6;
+    optional AdjustMessage adjustMessage = 7;
+    optional SceneMessage sceneMessage = 8;
+    optional AlarmMessage alarmMessage = 9;
+    optional TroubleMessage troubleMessage = 10;
+    optional WarningMessage warningMessage = 11;
+    optional ElectricityMessage electricityMessage = 12;
+    optional VideoMessage videoMessage = 13;
+    optional InfoMessage infoMessage = 14;
+    optional VideoDownMessage videoDownMessage = 15;
+    optional InfoDownMessage infoDownMessage = 16;
+    optional PollingCheckMessage pollingCheckMessage = 17;
+    optional SpotCheckMessage spotCheckMessage = 18;
+    optional AppMessage appMessage = 19;
+}

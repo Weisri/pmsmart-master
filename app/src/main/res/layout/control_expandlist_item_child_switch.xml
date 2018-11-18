@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/all_bg">
+
+    <RelativeLayout
+        android:id="@+id/ll_top"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="@dimen/dp_4"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp_24"
+            android:text="总电源开关"
+            android:theme="@style/ExpandListItem" />
+
+        <com.pm.intelligent.widget.SwichView
+            android:id="@+id/switch1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="14dp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_chart"
+        android:visibility="gone"
+        android:layout_below="@+id/ll_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <View style="@style/LineStyle" />
+
+
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/realChart"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_180" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

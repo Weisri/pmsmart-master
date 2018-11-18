@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/all_bg">
+
+    <com.pm.intelligent.widget.BaseToolBar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/toolbar_bg"
+        app:LeftImgButtonIcon="@mipmap/toolbar_back"
+        app:textColor="@color/white"
+        app:myTitle="@string/hardware_check"/>
+    <com.wall_e.multiStatusLayout.MultiStatusLayout
+        android:layout_below="@+id/toolbar"
+        android:id="@+id/status_layout_box"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:emptyLayout="@layout/empty_view"
+        app:errorLayout="@layout/error_view"
+        app:loadingLayout="@layout/loading_view"
+        app:netErrorLayout="@layout/no_network_view"
+        >
+
+    <ExpandableListView
+        android:id="@+id/expand_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_4"
+        android:divider="@color/all_bg"
+        android:groupIndicator="@null"
+        android:layout_below="@+id/toolbar"/>
+
+    </com.wall_e.multiStatusLayout.MultiStatusLayout>
+
+</RelativeLayout>

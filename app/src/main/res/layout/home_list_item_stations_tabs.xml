@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/dp_117"
+    android:layout_height="@dimen/dp_44"
+    android:background="@color/slide_list_head_bg">
+    <TextView
+        android:id="@+id/tv_station_name"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textSize="@dimen/slid_list_text_size"
+        android:textColor="@color/white"
+        android:background="@color/slide_list_head_bg"
+        android:paddingLeft="@dimen/dp_13"
+        android:paddingTop="14.5dp"
+        android:paddingBottom="@dimen/dp_15"
+        android:ellipsize="marquee"
+        android:gravity="center_vertical"
+        android:text="龙华站(上行)"/>
+
+</RelativeLayout>

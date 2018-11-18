@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tv_alarm_head"
+    android:layout_width="@dimen/dp_336"
+    android:layout_height="@dimen/dp_48"
+    android:layout_marginLeft="@dimen/dp_12"
+    android:gravity="center_vertical"
+    android:paddingLeft="@dimen/dp_12"
+    android:textColor="@color/black"
+    android:textSize="@dimen/sp_15"
+    android:layout_marginTop="@dimen/dp_12"
+    android:background="@drawable/expandlist_parent_item_bg"
+    android:text="龙华站牌（上行）LCD屏故障"/>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_50">
+    <RelativeLayout
+        android:id="@+id/rl_item_alarm"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp"
+        android:background="@color/white"
+        android:layout_centerVertical="true">
+
+    <RelativeLayout
+        android:id="@+id/rl_right"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_50"
+       android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tv_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_13"
+            android:layout_marginLeft="@dimen/dp_12"
+            android:text="2018.07.11"/>
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_below="@+id/tv_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_13"
+            android:layout_marginLeft="@dimen/dp_12"
+            android:text="16:36:22"/>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_station"
+        android:layout_width="@dimen/dp_74"
+        android:layout_height="@dimen/dp_50"
+        android:layout_toRightOf="@+id/rl_right"
+        android:layout_marginLeft="@dimen/dp_20"
+        android:textColor="@color/black"
+        android:gravity="center_vertical"
+        android:textSize="@dimen/sp_13"
+        android:text="龙华站（上行）"/>
+    <TextView
+        android:id="@+id/tv_info"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_50"
+        android:layout_toRightOf="@+id/tv_station"
+        android:layout_marginLeft="@dimen/dp_32"
+        android:textColor="@color/black"
+        android:gravity="center_vertical"
+        android:textSize="@dimen/sp_13"
+        android:text="电表故障"/>
+
+    <TextView
+        android:id="@+id/tv_isOk"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_50"
+        android:textColor="@color/splash_text_blue"
+        android:textSize="@dimen/sp_13"
+        android:layout_toLeftOf="@+id/more"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="@dimen/dp_25"
+        android:text="修复中"/>
+
+    <ImageView
+        android:id="@+id/more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="@dimen/dp_12"
+        android:background="@mipmap/more"/>
+    </RelativeLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="white">#FFFFFF</color>
+    <color name="home_list_tab_gray">#8a8a8a</color>
+    <color name="slide_list_head_bg">#222222</color>
+    <color name="toolbar_bg">#303030</color>
+    <color name="all_bg">#f4f4f4</color>
+    <color name="search_history_bg">#bbbbbb</color>
+    <color name="tv_clear">#b2b2b2</color>
+    <color name="search_history_item">#575757</color>
+    <color name="rec_item_divider">#dcdcdc</color>
+    <color name="black">#000000</color>
+    <color name="splash_text_blue">#4d98de</color>
+    <color name="splash_bottom_blue">#108ee9</color>
+    <color name="patrol_item_black">#010101</color>
+    <color name="patrol_item_gray">#535353</color>
+    <color name="text_black">#010101</color>
+    <color name="home_time_color">#333333</color>
+    <color name="splash_bottom_black">#333333</color>
+    <color name="splash_text_black">#777777</color>
+    <color name="home_station_current">#ff0303</color>
+    <color name="seek_bar_green">#10e92f</color>
+    <color name="f303030">#303030</color>
+    <color name="text_red">#fe0101</color>
+    <color name="fc8c6c8">#c8c6c8</color>
+    <color name="f333333">#333333</color>
+    <color name="ring_bg">#3ad380</color>
+</resources>

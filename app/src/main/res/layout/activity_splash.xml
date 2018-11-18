@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/iv_top"
+        android:layout_marginTop="@dimen/dp_70"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/splash_top"/>
+    <TextView
+        android:id="@+id/tv_text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_top"
+        android:layout_marginLeft="@dimen/dp_132"
+        android:layout_marginTop="@dimen/dp_54"
+        android:textColor="@color/splash_text_black"
+        android:textSize="@dimen/sp_15"
+        android:text="随时随地"/>
+
+    <TextView
+        android:id="@+id/tv_text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_text1"
+        android:text="实时监控"
+        android:layout_marginRight="136dp"
+        android:layout_alignParentEnd="true"
+        android:textColor="@color/splash_text_black"
+        android:textSize="@dimen/sp_15" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/sp_24"
+        android:layout_below="@+id/tv_text2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dp_58"
+        android:textColor="@color/splash_bottom_black"
+        android:text="普铭智能控制中心"/>
+</RelativeLayout>

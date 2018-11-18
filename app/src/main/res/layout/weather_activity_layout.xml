@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.pm.intelligent.widget.BaseToolBar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/toolbar_bg"
+        app:LeftImgButtonIcon="@mipmap/toolbar_back"
+        app:myTitle="气象检测"
+        app:textColor="@color/white" />
+
+    <com.wall_e.multiStatusLayout.MultiStatusLayout
+        android:id="@+id/status_layout_box"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:emptyLayout="@layout/empty_view"
+        app:errorLayout="@layout/error_view"
+        app:loadingLayout="@layout/loading_view"
+        app:netErrorLayout="@layout/no_network_view"
+        >
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/lv_box_weather"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/home_toolbar"
+            android:layout_marginTop="@dimen/dp_12"
+            android:background="@color/white"
+            android:divider="@color/all_bg"
+            android:dividerHeight="@dimen/dp_4" />
+
+</com.wall_e.multiStatusLayout.MultiStatusLayout>
+
+</LinearLayout>

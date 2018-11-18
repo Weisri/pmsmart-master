@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/all_bg"
+    android:paddingBottom="20dp">
+
+    <com.pm.intelligent.widget.BaseToolBar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/toolbar_bg"
+        app:LeftImgButtonIcon="@mipmap/toolbar_back"
+        app:myTitle="@string/title_smart_control"
+        app:textColor="@color/white" />
+
+    <com.wall_e.multiStatusLayout.MultiStatusLayout
+        android:id="@+id/status_layout"
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:emptyLayout="@layout/empty_view"
+        app:errorLayout="@layout/error_view"
+        app:loadingLayout="@layout/loading_view"
+        app:netErrorLayout="@layout/no_network_view">
+<RelativeLayout
+    android:layout_below="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ExpandableListView
+        android:id="@+id/expand_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="60dp"
+        android:layout_marginTop="@dimen/dp_4"
+        android:divider="@color/all_bg"
+        android:groupIndicator="@null" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/all_bg"
+        android:paddingEnd="16dp"
+        android:paddingStart="16dp">
+
+
+        <TextView
+            android:id="@+id/btn_reset_control"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/f333333"
+            android:gravity="center"
+            android:text="复位"
+            android:textColor="@color/white"
+            android:textSize="18dp" />
+
+        <View
+            android:layout_width="10dp"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/tv_commit"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/f333333"
+            android:gravity="center"
+            android:text="确定"
+            android:textColor="@color/white"
+            android:textSize="18dp" />
+
+    </LinearLayout>
+</RelativeLayout>
+    </com.wall_e.multiStatusLayout.MultiStatusLayout>
+
+
+
+</RelativeLayout>

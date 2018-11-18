@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/all_bg"
+        android:orientation="vertical">
+
+        <com.pm.intelligent.widget.BaseToolBar
+            android:id="@+id/home_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_44"
+            android:background="@color/toolbar_bg"
+            android:minHeight="@dimen/dp_44"
+            app:LeftImgButtonIcon="@mipmap/toolbar_back"
+            app:isShowEditText="false"
+            app:myTitle="故障跟踪"
+            app:textColor="@color/white" />
+
+        <include layout="@layout/alarm_list_item_info_detial_header" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_alarm_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/iv_call_tab"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/dp_8"
+            android:paddingBottom="@dimen/dp_9"
+            android:src="@mipmap/kefu" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="客服"
+            android:textSize="@dimen/sp_15"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/text_black"/>
+
+
+        <LinearLayout
+            android:id="@+id/ll_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="21dp"
+            android:layout_marginTop="17dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/dp_20"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp_15"
+                android:textColor="@color/text_black"
+                android:text="客服电话：15070761972" />
+
+            <ImageView
+                android:id="@+id/iv_call"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="88dp"
+                android:src="@mipmap/phone" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
