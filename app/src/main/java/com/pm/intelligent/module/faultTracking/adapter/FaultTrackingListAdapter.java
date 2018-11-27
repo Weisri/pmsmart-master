@@ -59,10 +59,16 @@ public class FaultTrackingListAdapter extends BaseAdapter {
         FaultTrackEntity infoBean = mList.get(i);
         SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
         SimpleDateFormat format1 = new SimpleDateFormat("HH:mm:ss");
-        String time = format.format(infoBean.getTroubleTime());
-        String time1 = format1.format(infoBean.getTroubleTime());
-        viewHolder.data.setText(time);
-        viewHolder.time.setText(time1);
+
+        if(infoBean.getTroubleTime()!=null){
+            String time = format.format(infoBean.getTroubleTime());
+            viewHolder.data.setText(time);
+        }
+        if (infoBean.getTroubleTime()!=null) {
+            String time1 = format1.format(infoBean.getTroubleTime());
+            viewHolder.time.setText(time1);
+        }
+
         viewHolder.station.setText(infoBean.getShelterName());
         if (infoBean.getTroubleStatus()==0) {
             viewHolder.status.setText("未修复");

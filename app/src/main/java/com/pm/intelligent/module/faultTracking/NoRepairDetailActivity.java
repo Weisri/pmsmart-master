@@ -17,6 +17,7 @@ import com.pm.intelligent.bean.FaultDetailBean;
 import com.pm.intelligent.bean.FaultTrackEntity;
 import com.pm.intelligent.module.faultTracking.bean.FaultInfo;
 import com.pm.intelligent.utils.CommonUtils;
+import com.pm.intelligent.utils.NetUtils;
 import com.pm.intelligent.utils.ToastUtils;
 import com.pm.intelligent.widget.BaseToolBar;
 import com.pm.intelligent.widget.LineView;
@@ -75,21 +76,27 @@ public class NoRepairDetailActivity extends BaseActivity implements BaseToolBar.
         tvFault.setText(mFaultInfo.getShelterName() +mFaultInfo.getTroubleName());
         SimpleDateFormat format = new SimpleDateFormat("HH:mm:ss");
         if (mFaultInfo.getTroubleStatus()==0) {
-            String time = format.format(mFaultInfo.getTroubleTime());
-            mDataList.add(new FaultDetailBean("您的故障信息已收到，待修复",time));
+            if (mFaultInfo.getTroubleTime()!=null) {
+                String time = format.format(mFaultInfo.getTroubleTime());
+                mDataList.add(new FaultDetailBean("您的故障信息已收到，待修复",time));
+            }
             faultDetailAdapter.notifyDataSetChanged();
         }
         if (mFaultInfo.getTroubleStatus() == 1) {
-            String time = format.format(mFaultInfo.getUpdateTime());
-            mDataList.add(new FaultDetailBean("您的故障信息已收到，正在修复中",time));
-            mDataList.add(new FaultDetailBean("您的故障信息已收到，待修复",time));
+            if (mFaultInfo.getUpdateTime()!=null) {
+                String time = format.format(mFaultInfo.getUpdateTime());
+                mDataList.add(new FaultDetailBean("您的故障信息已收到，正在修复中",time));
+                mDataList.add(new FaultDetailBean("您的故障信息已收到，待修复",time));
+            }
             faultDetailAdapter.notifyDataSetChanged();
         }
         if (mFaultInfo.getTroubleStatus()==2) {
-            String time = format.format(mFaultInfo.getTroubleTime());
-            mDataList.add(new FaultDetailBean("您的故障信息已收到，已修复",time));
-            mDataList.add(new FaultDetailBean("您的故障信息已收到，正在修复中",time));
-            mDataList.add(new FaultDetailBean("您的故障信息已收到，待修复",time));
+            if (mFaultInfo.getTroubleTime()!=null) {
+                String time = format.format(mFaultInfo.getTroubleTime());
+                mDataList.add(new FaultDetailBean("您的故障信息已收到，已修复",time));
+                mDataList.add(new FaultDetailBean("您的故障信息已收到，正在修复中",time));
+                mDataList.add(new FaultDetailBean("您的故障信息已收到，待修复",time));
+            }
             faultDetailAdapter.notifyDataSetChanged();
         }
     }
